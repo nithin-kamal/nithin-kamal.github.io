@@ -2,5 +2,4 @@
 const nextConfig = {
   output: "export",
 };
-mpodule.exports = nextConfig;
 export default nextConfig;
