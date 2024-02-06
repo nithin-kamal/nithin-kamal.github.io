@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <Section id="landing">
       <h1>Nithin Kamal</h1>
-      <h2> ggg</h2>
+      <h2> Software Engineer</h2>
     </Section>
   );
 };
