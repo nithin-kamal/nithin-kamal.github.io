@@ -1,4 +1,3 @@
-"use server";
 import React, { ReactNode } from "react";
 
 const sectionDivStyle = "box-border min-h-screen w-full p-6 ";
