@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 import Landing from "./sections/Landing";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
