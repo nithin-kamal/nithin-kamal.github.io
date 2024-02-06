@@ -1,6 +1,6 @@
 import React from "react";
 import { FileText } from "react-feather";
-import Link from "next/link";
+import SectionLink from "./SectionLink";
 
 type NavbarOptionsProps = {
   classnames: string;
@@ -10,25 +10,25 @@ const NavbarOptions = (props: NavbarOptionsProps) => {
   return (
     <ul tabIndex={0} className={props.classnames}>
       <li>
-        <Link href="#about">ABOUT</Link>
+        <SectionLink href="about">ABOUT</SectionLink>
       </li>
       <li>
-        <Link href="#skills">SKILLS</Link>
+        <SectionLink href="skills">SKILLS</SectionLink>
       </li>
       <li>
-        <Link href="#experience">TIMELINE</Link>
+        <SectionLink href="experience">TIMELINE</SectionLink>
       </li>
       <li>
-        <Link href="#projects">PROJECTS</Link>
+        <SectionLink href="projects">PROJECTS</SectionLink>
       </li>
       <li>
-        <Link href="#interests">INTERESTS</Link>
+        <SectionLink href="interests">INTERESTS</SectionLink>
       </li>
       <li>
-        <Link href="" className="inline-flex">
+        <SectionLink href="" className="inline-flex">
           <FileText />
           RESUME
-        </Link>
+        </SectionLink>
       </li>
     </ul>
   );

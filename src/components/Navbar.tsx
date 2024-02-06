@@ -1,14 +1,14 @@
 import React from "react";
 import NavbarOptions from "./NavbarOptions";
-import Link from "next/link";
+import SectionLink from "./SectionLink";
 
 const Navbar = () => {
   return (
     <div className="navbar fixed bg-base-100">
       <div className="navbar-start">
-        <Link className="btn btn-ghost text-xl" href="">
+        <SectionLink className="btn btn-ghost text-xl" href="landing">
           Nithin Kamal
-        </Link>
+        </SectionLink>
       </div>
       <div className=" hidden lg:flex">
         <NavbarOptions classnames="menu menu-horizontal px-1" />
