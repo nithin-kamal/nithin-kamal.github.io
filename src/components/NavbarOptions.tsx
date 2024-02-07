@@ -10,22 +10,32 @@ const NavbarOptions = (props: NavbarOptionsProps) => {
   return (
     <ul tabIndex={0} className={props.classnames}>
       <li>
-        <SectionLink href="about">ABOUT</SectionLink>
+        <SectionLink className="mt-1" href="about">
+          ABOUT
+        </SectionLink>
       </li>
       <li>
-        <SectionLink href="skills">SKILLS</SectionLink>
+        <SectionLink className="mt-1" href="skills">
+          SKILLS
+        </SectionLink>
       </li>
       <li>
-        <SectionLink href="experience">TIMELINE</SectionLink>
+        <SectionLink className="mt-1" href="experience">
+          TIMELINE
+        </SectionLink>
       </li>
       <li>
-        <SectionLink href="projects">PROJECTS</SectionLink>
+        <SectionLink className="mt-1" href="projects">
+          PROJECTS
+        </SectionLink>
       </li>
       <li>
-        <SectionLink href="interests">INTERESTS</SectionLink>
+        <SectionLink className="mt-1" href="interests">
+          INTERESTS
+        </SectionLink>
       </li>
       <li>
-        <SectionLink href="" className="inline-flex">
+        <SectionLink href="" className="inline-flex p-1.5">
           <FileText />
           RESUME
         </SectionLink>

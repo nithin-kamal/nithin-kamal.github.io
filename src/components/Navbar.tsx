@@ -4,16 +4,14 @@ import SectionLink from "./SectionLink";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed bg-base-100">
-      <div className="navbar-start">
-        <SectionLink className="btn btn-ghost text-xl" href="landing">
-          Nithin Kamal
-        </SectionLink>
-      </div>
-      <div className=" hidden lg:flex">
+    <div className="navbar fixed bg-base-100 content-center">
+      <SectionLink className="text-3xl" href="landing">
+        Nithin Kamal
+      </SectionLink>
+      <div className=" hidden  lg:flex  ml-auto mr-10">
         <NavbarOptions classnames="menu menu-horizontal px-1" />
       </div>
-      <div className="navbar-end lg:hidden">
+      <div className="ml-auto mr-10 lg:hidden">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost ">
             <svg

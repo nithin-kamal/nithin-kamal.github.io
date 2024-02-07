@@ -2,25 +2,22 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
 
-const SectionLink = ({
-  href,
-  children,
-  className,
-}: {
+type SectionLinkType = {
   href: string;
   children: ReactNode;
   className?: string;
-}) => {
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+};
+
+const SectionLink = ({ href, children, className }: SectionLinkType) => {
+  const scrollToSection = (href: string) => {
     const section = document.getElementById(href);
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <Link href={href} className={className} onClick={scrollToSection}>
+    <div className={"btn " + className} onClick={() => scrollToSection(href)}>
       {children}
-    </Link>
+    </div>
   );
 };
 
