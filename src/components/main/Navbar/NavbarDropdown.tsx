@@ -14,9 +14,15 @@ const NavbarDropDown = ({
     onClickOutside: setIsMenuOpen,
   });
   return (
-    <div className="h-fit block bg-base-100" ref={wrapperRef}>
+    <div
+      className={`h-fit fixed w-full top-[65px] 
+      block bg-gradient-to-tr
+       from-blue-900/80 to-blue-800/80
+         backdrop-blur-sm z-50`}
+      ref={wrapperRef}
+    >
       {NavbarOptions().map((option, index) => (
-        <div key={index} className="mx-2 mr-6">
+        <div key={index} className="px-2 pr-6 w-full">
           {option}
         </div>
       ))}

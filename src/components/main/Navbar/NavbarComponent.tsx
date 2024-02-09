@@ -50,13 +50,13 @@ const NavbarComponent = () => {
   return (
     <>
       <nav
-        className={`fixed w-screen z-50 p-2 pt-3 bg-gradient-to-br nav ${
+        className={`fixed flex-col w-full flex z-50 top-0 pr-[5px] lg:px-10 h-[65px] bg-gradient-to-br place-content-center nav ${
           isScrolled || isMenuOpen ? "from-blue-900/80 to-blue-800/80" : ""
         }  backdrop-blur-sm`}
       >
-        <div className="flex justify-between">
-          <div className="justify-start m-0 p-0 content-center flex">
-            <Button variant="light" className="text-4xl ml-3 px-2 w-fit">
+        <div className="flex flex-row justify-between">
+          <div className=" justify-start p-0 content-center flex">
+            <Button variant="light" className="text-4xl px-2 w-fit">
               <SectionLink href="landing">{data.name}</SectionLink>
             </Button>
           </div>
@@ -65,7 +65,7 @@ const NavbarComponent = () => {
               <div key={index}>{option}</div>
             ))}
           </div>
-          <div className="flex lg:hidden justify-end ml-auto mr-6">
+          <div className="flex lg:hidden justify-end ml-auto ">
             <Button
               variant="bordered"
               onClick={handleMenu}
@@ -76,8 +76,8 @@ const NavbarComponent = () => {
             </Button>
           </div>
         </div>
-        {isMenuOpen && <NavbarDropDown setIsMenuOpen={setIsMenuOpen} />}
       </nav>
+      {isMenuOpen && <NavbarDropDown setIsMenuOpen={setIsMenuOpen} />}
     </>
   );
 };

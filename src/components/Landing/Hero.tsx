@@ -9,22 +9,23 @@ import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 const Hero = () => {
   return (
     <div className=" flex flex-col h-full w-full">
-      <div className="flex flex-col items-center justify-center w-full z-[20]">
+      <div className="flex flex-col items-center content-center gap-4 justify-center w-full z-[20]">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          className="flex flex-row items-center relative justify-center px-20 m-2 mt-40 w-full z-[20]"
+          className="flex flex-col-reverse md:flex-row items-center relative justify-center md:px-20 w-full z-[20]"
         >
-          <HeroText />
+          <HeroText className="h-full w-full flex flex-col gap-5 place-items-center place-contents-center text-center m-auto md:text-start" />
           <motion.div
             variants={slideInFromRight(0.8)}
-            className="w-full h-full flex justify-center items-center"
+            className="w-full h-full flex place-items-center place-content-center text-center"
           >
             <Image
               src="/mainIconsdark.svg"
               alt="work icons"
-              height={650}
-              width={650}
+              className={
+                "max-h-[35vh] md:max-h-[50vh] w-auto h-auto place-items-center place-content-center "
+              }
             />
           </motion.div>
         </motion.div>
@@ -39,7 +40,7 @@ const Hero = () => {
           >
             <SectionLink
               href="about"
-              className="animate-bounce p-4 button-primary text-center text-2xl text-white cursor-pointer rounded-lg w-fit"
+              className="animate-bounce md:p-4 button-primary text-center text-lg md:text-2xl text-white cursor-pointer rounded-lg w-fit"
             >
               Explore
               <ArrowDownCircleIcon width={30} className="ml-2" />
