@@ -1,4 +1,4 @@
-import Section from "@/components/Section";
+import Section from "@/components/main/Section/Section";
 import React from "react";
 
 const Skills = () => {

@@ -1,10 +1,15 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}", // Note the addition of the `app` directory.
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -15,10 +20,28 @@ const config: Config = {
       },
     },
   },
-  daisyui: {
-    themes: ["fantasy", "night"],
-    darkTheme: "night",
-  },
-  plugins: [require("daisyui")],
+  plugins: [
+    nextui({
+      addCommonColors: true,
+      defaultTheme: "dark",
+      themes: {
+        light: {
+          colors: {},
+        },
+        dark: {
+          colors: {
+            black: "#002E62",
+            white: "#FAFAFA",
+            default: "#CCE3FD",
+            focus: "#000000",
+            background: "#002E62",
+            foreground: "#FAFAFA",
+            primary: "#002e62",
+            secondary: "#d1d1d1",
+          },
+        },
+      },
+    }),
+  ],
 };
 export default config;
