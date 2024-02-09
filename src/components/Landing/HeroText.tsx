@@ -11,7 +11,6 @@ type Props = {
 const HeroText = ({ className }: Props) => {
   const [text, count] = useTypewriter({
     words: [data.title],
-    loop: true,
     deleteSpeed: 0,
     delaySpeed: 2000,
   });
@@ -30,7 +29,6 @@ const HeroText = ({ className }: Props) => {
         className="text-xl md:text-3xl text-gray-400 my-5 max-w-[600px] min-h-[100px]"
       >
         {text}
-        <Cursor cursorColor="white" />
       </motion.p>
     </div>
   );

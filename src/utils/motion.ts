@@ -1,8 +1,9 @@
 export function slideInFromLeft(delay: number) {
   return {
-    hidden: { x: -1000, opacity: 0 },
+    hidden: { x: -1000, width: 0, opacity: 0 },
     visible: {
       x: 0,
+      width: "100%",
       opacity: 1,
       transition: {
         delay: delay,

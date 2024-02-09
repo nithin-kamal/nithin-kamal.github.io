@@ -28,7 +28,7 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         <Providers>
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
           {children}
         </Providers>
       </body>
