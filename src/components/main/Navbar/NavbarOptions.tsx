@@ -19,7 +19,7 @@ const NavbarOptions = (activeSection?: string) => {
     <NavLinks
       activeSection={activeSection}
       key="resume"
-      href=""
+      href="fdgdf"
       className="flex"
     >
       RESUME

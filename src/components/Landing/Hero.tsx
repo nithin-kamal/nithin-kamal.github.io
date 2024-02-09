@@ -1,67 +1,52 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  slideInFromLeft,
-  slideInFromRight,
-  slideInFromTop,
-} from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/20/solid";
+import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { Image } from "@nextui-org/react";
+import HeroText from "./HeroText";
+import SectionLink from "../main/Section/SectionLink";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col h-full w-full">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
-      >
-        <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-          <motion.div
-            className="Welcome-box py-[15px] px-[7px] border border=[#7042f88b] opacity-[0.9]"
-            variants={slideInFromTop}
-          >
-            <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-            <h1 className="Welcome-text text-[13px]">Full Stack Portfolio</h1>
-          </motion.div>
-          <motion.div
-            variants={slideInFromLeft(0.5)}
-            className="flex flex-col gap-6 mt-6 text-3xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
-          >
-            <span>
-              Providing{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-                Full Stack Development{" "}
-              </span>{" "}
-              experience
-            </span>
-          </motion.div>
-          <motion.p
-            variants={slideInFromLeft(0.8)}
-            className="text-lg text-gray-400 my-5 max-2-[600px]"
-          >
-            I am a Full Stack Developer with a passion for creating beautiful
-            and functional web applications.
-          </motion.p>
-          <motion.a
-            variants={slideInFromLeft(1)}
-            className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-          >
-            Learn More
-          </motion.a>
-        </div>
+    <div className=" flex flex-col h-full w-full">
+      <div className="flex flex-col items-center justify-center w-full z-[20]">
         <motion.div
-          variants={slideInFromRight(0.8)}
-          className="w-full h-full flex justify-center items-center"
+          initial="hidden"
+          whileInView="visible"
+          className="flex flex-row items-center relative justify-center px-20 m-2 mt-40 w-full z-[20]"
         >
-          <Image
-            src="/mainIconsdark.svg"
-            alt="work icons"
-            height={650}
-            width={650}
-          />
+          <HeroText />
+          <motion.div
+            variants={slideInFromRight(0.8)}
+            className="w-full h-full flex justify-center items-center"
+          >
+            <Image
+              src="/mainIconsdark.svg"
+              alt="work icons"
+              height={650}
+              width={650}
+            />
+          </motion.div>
         </motion.div>
-      </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          className="flex items-center justify-center w-full px-40"
+        >
+          <motion.div
+            variants={slideInFromRight(0.8)}
+            className=" mt-4 w-full h-full justify-center flex items-center"
+          >
+            <SectionLink
+              href="about"
+              className="animate-bounce p-4 button-primary text-center text-2xl text-white cursor-pointer rounded-lg w-fit"
+            >
+              Explore
+              <ArrowDownCircleIcon width={30} className="ml-2" />
+            </SectionLink>
+          </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
