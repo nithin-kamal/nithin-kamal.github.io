@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactNode } from "react";
 
 const sectionDivStyle =
-  " min-h-screen w-full place-items-center place-content-center flex text-center p-6 ";
+  " min-h-screen w-full place-items-center place-content-center pt-[65px] flex text-center p-6  snap-start";
 
 type SectionProps = {
   children: ReactNode;
