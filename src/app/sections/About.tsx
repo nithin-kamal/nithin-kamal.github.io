@@ -30,6 +30,7 @@ const About = () => {
         <motion.div
           initial="hidden"
           whileInView={"visible"}
+          viewport={{ once: true }}
           className="flex flex-row place-items-center place-content-center gap-5 flex-wrap mt-4 overflow-hidden"
         >
           {data.sections.slice(1).map((section, index) => (
