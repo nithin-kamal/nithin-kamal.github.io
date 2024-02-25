@@ -1,12 +1,11 @@
+"use client";
 import React from "react";
-import { data } from "../InfoConfig";
+import { data, SkillType } from "../InfoConfig";
 import Section from "@/components/main/Section/Section";
 import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 import SubTitle from "@/components/Skills/SubTitle";
 
 const Skills = () => {
-  type SkillProps = typeof data.skills[0];
-
   return (
     <Section id="skills">
       <div className="flex-col center-container gap-3 z-[20] ">
@@ -19,20 +18,35 @@ const Skills = () => {
           }
         </h3>
         <Accordion variant="splitted">
-          {data.skills.map((skill: SkillProps, index: number) => (
+          {data.skills.map((skill: SkillType, index: number) => (
             <AccordionItem
               key={index}
-              aria-label="Chung Miller"
+              aria-label={skill.title}
+              className="!bg-opacity-70 backdrop-blur-sm"
               startContent={
                 <Avatar
                   isBordered
                   color="primary"
                   radius="lg"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                  src={skill.logo}
                 />
               }
-              subtitle={<SubTitle skills={skill.items} />}
-              title={skill.title}
+              subtitle={
+                <SubTitle skills={skill.items} boldIdx={skill.boldIdx} />
+              }
+              title={
+                <p className="text-lg md:text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-cyan-500 text-center md:text-start font-semibold">
+                  {
+                    <>
+                      <span className="md:hidden">
+                        {" "}
+                        {skill.smallTitle || skill.title}
+                      </span>
+                      <span className="hidden md:block"> {skill.title}</span>
+                    </>
+                  }
+                </p>
+              }
             >
               {skill.description}
             </AccordionItem>

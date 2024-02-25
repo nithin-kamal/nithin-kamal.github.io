@@ -18,7 +18,7 @@ const HeroText = ({ className }: Props) => {
     <div className={className}>
       <motion.div
         variants={slideInFromLeft(0.8)}
-        className="flex flex-col gap-6 mt-6 text-3xl md:text-8xl font-bold text-white max-w-[600px] w-auto h-auto"
+        className="flex flex-col gap-6 mt-6 text-4xl md:text-8xl font-bold text-white max-w-[600px] w-auto h-auto"
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
           {data.name}
@@ -26,7 +26,7 @@ const HeroText = ({ className }: Props) => {
       </motion.div>
       <motion.p
         variants={slideInFromLeft(0.8)}
-        className="text-xl md:text-3xl text-gray-400 my-5 max-w-[600px] min-h-[100px] text-center md:text-start"
+        className="text-xl md:text-3xl text-gray-400 mt-5 md:mb-5 max-w-[600px] min-h-[100px] text-center md:text-start"
       >
         {text}
       </motion.p>

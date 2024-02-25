@@ -1,4 +1,4 @@
-export const data = {
+export const data: InfoConfig = {
   name: "Nithin Kamal",
   title: "Machine Learning Engineer, Software Engineer, Full Stack Developer",
   sections: ["about", "skills", "timeline", "projects"],
@@ -19,6 +19,7 @@ export const data = {
   skills: [
     {
       title: "Languages",
+      logo: "/code.png",
       items: ["Python", "TypeScript", "JavaScript", "C++", "Bash", "SQL"],
       boldIdx: 2,
       description:
@@ -26,6 +27,7 @@ export const data = {
     },
     {
       title: "Artificial Intelligence & Machine Learning",
+      logo: "/ai.png",
       smallTitle: "AI & ML",
       items: [
         "Computer Vision",
@@ -53,6 +55,7 @@ export const data = {
     },
     {
       title: "Web Development",
+      logo: "/web.png",
       items: [
         "React",
         "Next.js",
@@ -74,11 +77,11 @@ export const data = {
     },
     {
       title: "DevOps & Cloud",
+      logo: "/cloud.jpg",
       items: [
         "Git",
         "Docker",
         "AWS",
-        ,
         "CI/CD",
         "Windows",
         "Linux",
@@ -87,7 +90,6 @@ export const data = {
         "GitLab",
         "Vercel",
         "Jenkins",
-        "Micorosft Azure",
       ],
       boldIdx: 3,
       description:
@@ -95,6 +97,7 @@ export const data = {
     },
     {
       title: "Databases",
+      logo: "/db.jpg",
       items: [
         "PostGreSQL",
         "MongoDB",
@@ -103,12 +106,13 @@ export const data = {
         "QuasarDB",
         "SQLite",
       ],
-      boldIdx: 0,
+      boldIdx: 2,
       description:
         "I have experience in working with SQL and NoSQL databases for various applications.",
     },
     {
       title: "Methodology",
+      logo: "/agile.jpg",
       items: [
         "Agile",
         "Test Driven Development",
@@ -117,15 +121,17 @@ export const data = {
         "Pair Programming",
         "Code Review",
       ],
-      boldIdx: 0,
+      boldIdx: 2,
       description:
         "I have experience in working with Agile methodologies and have been part of various software development teams.",
     },
     {
       title: "Others",
+      logo: "/others.jpg",
       items: [
         "ROS (Robot Operating System)",
         "Data Structures and Algorithms",
+        "Design Patterns",
         "JIRA",
         "Shell Script",
         "Gazebo",
@@ -133,12 +139,34 @@ export const data = {
         "Microsoft Office",
         "Object Oriented Programming",
         "Functional Programming",
-        "Design Patterns",
         "PyQt",
       ],
-      boldIdx: 2,
+      boldIdx: 3,
       description:
         "I have experience in working with ROS and have experience in developing and deploying ROS nodes for various robotic applications. I am also proficient in data structures and algorithms and design patterns.",
     },
   ],
 };
+
+export type SkillType = {
+  title: string;
+  logo: string;
+  items: string[];
+  boldIdx: number;
+  description: string;
+  smallTitle?: string;
+};
+
+export interface InfoConfig {
+  name: string;
+  title: string;
+  sections: string[];
+  sectionTitles: string[];
+  about: {
+    title: string;
+    description: string;
+  };
+  education: string[];
+  banner: string[];
+  skills: SkillType[];
+}

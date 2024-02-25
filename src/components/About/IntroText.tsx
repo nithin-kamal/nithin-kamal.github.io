@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "@/app/InfoConfig.js";
+import { data } from "@/app/InfoConfig";
 
 type Props = {};
 

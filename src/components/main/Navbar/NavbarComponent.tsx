@@ -6,9 +6,7 @@ import SectionLink from "../Section/SectionLink";
 import { Button, Navbar } from "@nextui-org/react";
 import { Menu, X } from "react-feather";
 import { data } from "@/app/InfoConfig";
-import { act } from "react-dom/test-utils";
 
-// TODO: fix dropdown close on click when open
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);

@@ -9,7 +9,7 @@ import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 const Hero = () => {
   return (
     <div className=" flex flex-col h-full w-full">
-      <div className="flex flex-col items-center content-center gap-4 justify-center w-full z-[20] overflow-hidden">
+      <div className="flex flex-col items-center content-center gap-4 justify-center w-full z-[20] overflow-hidden pb-[20px]">
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -22,7 +22,7 @@ const NavLinks = ({
     >
       <li
         className={`text-lg flex content-center ${
-          activeSection === href ? "border-b-3 " : ""
+          activeSection === href ? "border-b-3 font-semibold" : ""
         }`}
       >
         <SectionLink href={href}>{children}</SectionLink>
