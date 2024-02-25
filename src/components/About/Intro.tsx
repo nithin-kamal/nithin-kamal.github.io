@@ -20,7 +20,7 @@ const Intro = (props: Props) => {
           <div className="flex flex-col items-center justify-center w-full h-full">
             <div
               className={`flex flex-col md:flex-row place-items-center place-content-center gap-6 h-full
-                      w-full  mt-4`}
+                       mt-4`}
             >
               <div className="center-container">
                 <Image

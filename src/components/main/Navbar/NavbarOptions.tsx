@@ -1,21 +1,19 @@
 import React from "react";
 import { FileText } from "react-feather";
 import NavLinks from "./NavLinks";
+import { data } from "@/app/InfoConfig";
 
 const NavbarOptions = (activeSection?: string) => {
+  const sectionLinks = data.sections.map((section: string, idx: number) => {
+    return (
+      <NavLinks activeSection={activeSection} key={section} href={section}>
+        {data.sectionTitles[idx]}
+      </NavLinks>
+    );
+  });
+
   return [
-    <NavLinks activeSection={activeSection} key="about" href="about">
-      ABOUT
-    </NavLinks>,
-    <NavLinks activeSection={activeSection} key="skills" href="skills">
-      SKILLS
-    </NavLinks>,
-    <NavLinks activeSection={activeSection} key="experience" href="experience">
-      TIMELINE
-    </NavLinks>,
-    <NavLinks activeSection={activeSection} key="projects" href="projects">
-      PROJECTS
-    </NavLinks>,
+    ...sectionLinks,
     <NavLinks
       activeSection={activeSection}
       key="resume"

@@ -13,21 +13,21 @@ const Hero = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          className="flex flex-col-reverse md:flex-row items-center relative justify-center md:px-20 w-full z-[20]"
+          className="flex flex-col md:flex-row items-center relative justify-center md:px-20 w-full z-[20]"
         >
-          <HeroText className="h-full w-full flex flex-col gap-5 place-items-center place-contents-center text-center m-auto md:text-start" />
           <motion.div
             variants={slideInFromRight(0.8)}
             className="w-full h-full flex place-items-center place-content-center text-center"
           >
             <Image
-              src="/mainIconsdark.svg"
+              src="/logoW.png"
               alt="work icons"
               className={
-                "max-h-[35vh] md:max-h-[50vh] w-auto h-auto place-items-center place-content-center "
+                "max-h-[35vh] md:max-h-[50vh] w-auto h-auto place-items-center place-content-center pl-[30px] !opacity-40"
               }
             />
           </motion.div>
+          <HeroText className="h-full w-full flex flex-col gap-5 place-items-center place-contents-center text-center  md:text-start md:mt-auto" />
         </motion.div>
         <motion.div
           initial="hidden"

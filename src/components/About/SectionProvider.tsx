@@ -1,34 +1,20 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@nextui-org/react";
+import SectionLink from "../main/Section/SectionLink";
 
 interface Props {
   section: string;
-  index: number;
-  href?: string;
+  sectionTitle: string;
 }
-const SectionProvider = ({ section, index, href }: Props) => {
-  const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const animationDelay = 0.3;
-
+const SectionProvider = ({ section, sectionTitle}: Props) => {
   return (
-    <motion.div
-      initial="hidden"
-      variants={imageVariants}
-      whileInView={"visible"}
-      custom={index}
-      transition={{ delay: index * animationDelay }}
-      className={"basis-1/4"}
-    >
-      <Button className="bg-gradient-to-r from-pink-500/50 to-violet-500/50">
-        {section.toUpperCase()}
-      </Button>
-    </motion.div>
+    
+      <SectionLink
+        href={section}
+        className="flex cursor-pointer bg-gradient-to-r from-purple-500/30 via-indigo-500/30 to-cyan-500/30 w-28 rounded-lg place-content-center place-items-center hover:from-purple-600/50  hover:to-purple-400/50"
+      >
+        {sectionTitle}
+      </SectionLink>
   );
 };
 

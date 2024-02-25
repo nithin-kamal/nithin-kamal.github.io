@@ -3,7 +3,7 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <Section id="experience">
+    <Section id="timeline">
       <h1>Experience</h1>
     </Section>
   );

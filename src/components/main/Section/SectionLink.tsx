@@ -8,6 +8,7 @@ type SectionLinkType = {
 
 const SectionLink = ({ href, children, className }: SectionLinkType) => {
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    console.log("clicked");
     const section = document.getElementById(href);
     setTimeout(() => section?.scrollIntoView({ behavior: "smooth" }));
   };
