@@ -38,26 +38,29 @@ const Intro = (props: Props) => {
                       network="linkedin"
                       url={data.linkedin}
                       fgColor="#f5f5f5"
-                      bgColor="#110f13"
+                      bgColor="#002E62"
                       target="_blank"
+                      className="border-2 border-slate-500 rounded-full"
                     />
                   </Tooltip>
                   <Tooltip content="GitHub">
                     <SocialIcon
                       network="github"
                       fgColor="#f5f5f5"
-                      bgColor="#110f13"
+                      bgColor="#002E62"
                       url={data.github}
                       target="_blank"
+                      className="border-2 border-slate-500 rounded-full"
                     />
                   </Tooltip>
                   <Tooltip content="Email">
                     <SocialIcon
                       network="email"
                       fgColor="#f5f5f5"
-                      bgColor="#110f13"
+                      bgColor="#002E62"
                       url={data.mail}
                       target="_blank"
+                      className="border-2 border-slate-500 rounded-full "
                     />
                   </Tooltip>
                 </div>
