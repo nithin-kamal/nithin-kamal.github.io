@@ -1,7 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  serverRuntimeConfig: {
-    GITHUB_ACCESS_TOKEN: process.env.GITHUB_ACCESS_TOKEN,
-  },
-};
+const nextConfig = {};
 export default nextConfig;
