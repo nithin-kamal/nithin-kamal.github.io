@@ -2,8 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Banner from "./Banner";
-import { Image } from "@nextui-org/react";
+import { Image, Tooltip } from "@nextui-org/react";
 import IntroText from "./IntroText";
+import { data } from "@/app/InfoConfig";
+import { SocialIcon } from "react-social-icons";
 
 type Props = {};
 
@@ -22,7 +24,7 @@ const Intro = (props: Props) => {
               className={`flex flex-col md:flex-row place-items-center place-content-center gap-6 h-full
                        mt-4`}
             >
-              <div className="center-container">
+              <div className="center-container flex-col">
                 <Image
                   src="/thumbnailPortfolio.png"
                   alt="work icons"
@@ -30,6 +32,35 @@ const Intro = (props: Props) => {
                     "max-h-[15vh]  rounded-full md:max-h-[30vh] w-auto h-auto place-items-center place-content-center "
                   }
                 />
+                <div className="flex flex-row gap-3 mt-4">
+                  <Tooltip content="LinkedIn">
+                    <SocialIcon
+                      network="linkedin"
+                      url={data.linkedin}
+                      fgColor="#f5f5f5"
+                      bgColor="#110f13"
+                      target="_blank"
+                    />
+                  </Tooltip>
+                  <Tooltip content="GitHub">
+                    <SocialIcon
+                      network="github"
+                      fgColor="#f5f5f5"
+                      bgColor="#110f13"
+                      url={data.github}
+                      target="_blank"
+                    />
+                  </Tooltip>
+                  <Tooltip content="Email">
+                    <SocialIcon
+                      network="email"
+                      fgColor="#f5f5f5"
+                      bgColor="#110f13"
+                      url={data.mail}
+                      target="_blank"
+                    />
+                  </Tooltip>
+                </div>
               </div>
               <IntroText />
             </div>

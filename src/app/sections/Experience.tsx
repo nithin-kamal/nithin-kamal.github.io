@@ -15,6 +15,7 @@ const Experience = () => {
         <VerticalTimeline
           className="gap-6"
           lineColor="rgba(122, 168, 184, 0.4)"
+          animate={false}
         >
           {data.timeline.map((item, index) => (
             <TimelineElement key={index} item={item} index={index} />

@@ -49,12 +49,15 @@ const NavbarComponent = () => {
     <>
       <nav
         className={`sticky flex-col w-full flex z-50 top-0 pr-[5px] lg:px-10 h-[65px] bg-gradient-to-br place-content-center nav ${
-          isScrolled || isMenuOpen ? "from-blue-900/80 to-blue-800/80" : ""
+          isScrolled || isMenuOpen ? "from-blue-900/30 to-blue-800/30" : ""
         }  backdrop-blur-sm`}
       >
         <div className="flex flex-row justify-between">
           <div className=" justify-start p-0 content-center flex">
-            <Button variant="light" className="text-4xl px-2 w-fit">
+            <Button
+              variant="light"
+              className="text-4xl font-bold px-2 w-fit text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+            >
               <SectionLink href="landing">{data.name}</SectionLink>
             </Button>
           </div>

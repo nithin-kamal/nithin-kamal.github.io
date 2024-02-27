@@ -1,6 +1,9 @@
 export const data: InfoConfig = {
   name: "Nithin Kamal",
   title: "Machine Learning Engineer, Software Engineer, Full Stack Developer",
+  linkedin: "https://www.linkedin.com/in/nithin-kamal-dev777/",
+  github: "https://github.com/nithin-kamal",
+  mail: "mailto:nithin.kamal.dev@outlook.com",
   sections: ["about", "skills", "timeline", "projects"],
   sectionTitles: ["ABOUT", "SKILLS", "EXPERIENCE", "PROJECTS"],
   about: {
@@ -231,6 +234,9 @@ export type TimelineType = {
 export interface InfoConfig {
   name: string;
   title: string;
+  linkedin: string;
+  github: string;
+  mail: string;
   sections: string[];
   sectionTitles: string[];
   about: {

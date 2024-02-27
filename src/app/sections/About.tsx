@@ -17,7 +17,7 @@ const About = () => {
       x: 0,
       scale: 1,
       opacity: 1,
-      transition: { delay: 0.5, duration: 0.5 },
+      transition: { delay: 0.1, duration: 0.1 },
     },
   };
   return (
@@ -27,24 +27,19 @@ const About = () => {
         <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200 lg:text-2xl text-center ">
           Learn more about my:
         </h3>
-        <motion.div
-          initial="hidden"
-          whileInView={"visible"}
-          viewport={{ once: true }}
-          className="flex flex-row place-items-center place-content-center gap-5 flex-wrap mt-4 overflow-hidden"
-        >
+        <div className="flex flex-row place-items-center place-content-center gap-5 flex-wrap mt-4 overflow-hidden snap-end">
           {data.sections.slice(1).map((section, index) => (
-            <motion.div variants={imageVariants} key={index} custom={index}>
+            <div key={index}>
               <SectionProvider
                 section={section}
                 sectionTitle={data.sectionTitles[index + 1]}
               />
-            </motion.div>
+            </div>
           ))}
-          <motion.div variants={imageVariants} custom={data.sections.length}>
+          <div>
             <SectionProvider section="resume" sectionTitle="RESUME" />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </Section>
   );
