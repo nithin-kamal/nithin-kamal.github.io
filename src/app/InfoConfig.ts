@@ -158,7 +158,7 @@ export const data: InfoConfig = {
     },
     {
       title: "Master's Thesis - Machine Learning Engineer",
-      logo: "/bmw.png",
+      logo: "/BMW.png",
       company: "BMW Group",
       location: "Munich, Germany",
       date: "Oct, 2022 - July, 2023",
@@ -167,7 +167,7 @@ export const data: InfoConfig = {
     },
     {
       title: "Intern - Robotic Software Engineer",
-      logo: "/bmw.png",
+      logo: "/BMW.png",
       company: "BMW Group",
       location: "Munich, Germany",
       date: "April, 2022 - Oct, 2022",
