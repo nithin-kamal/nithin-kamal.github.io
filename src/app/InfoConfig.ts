@@ -146,6 +146,68 @@ export const data: InfoConfig = {
         "I have experience in working with ROS and have experience in developing and deploying ROS nodes for various robotic applications. I am also proficient in data structures and algorithms and design patterns.",
     },
   ],
+  timeline: [
+    {
+      title: "Software Engineer (Student) - Self Adaptive Systems",
+      logo: "/fraunhoferLogo.png",
+      company: "Fraunhofer IKS",
+      location: "Munich, Germany",
+      date: "July, 2023 - Jan, 2024",
+      description:
+        "Worked on a project to develop automated trains. Developed collaborative user interfaces for the system design and definition. Researched and defined the components within the autonomous systems and its dynamic environment.",
+    },
+    {
+      title: "Master's Thesis - Machine Learning Engineer",
+      logo: "/bmw.png",
+      company: "BMW Group",
+      location: "Munich, Germany",
+      date: "Oct, 2022 - July, 2023",
+      description:
+        "As part of my master's thesis research, I conducted extensive research into the state of the art vision-based anomaly detection algorithms. I developed and implemented a machine learning pipeline for the vision module of an automated quality assurance robot, based on a novel approach for industrial anomaly detection that achieved a 30% improvement in robustness.",
+    },
+    {
+      title: "Intern - Robotic Software Engineer",
+      logo: "/bmw.png",
+      company: "BMW Group",
+      location: "Munich, Germany",
+      date: "April, 2022 - Oct, 2022",
+      description:
+        "My work as an intern at the digitization and innovation department of BMW Group involved developing graphical user interfaces, integrating new sensors and enforcing safety limits for the control and monitoring of an automated quality assurance robot and the end-to-end development of a scalable web-app for remote monitoring and control of the robot.",
+    },
+    {
+      title: "Software Developer (Student) - Full Stack Developer",
+      logo: "/indurad_logo.png",
+      company: "Indurad GmbH",
+      location: "Aachen, Germany",
+      date: "April, 2021 - May, 2022",
+      description:
+        "My work at this role involved developing interactive and scalable web-apps and visualization across multiple products. I was also involved in optimizing the performance and user experience of the products.",
+    },
+    {
+      title: "Software Engineer - Full Stack Developer",
+      logo: "/kimball.png",
+      company: "Kimball Electronics",
+      location: "Trivandrum, India",
+      date: "Nov, 2019 - May, 2020",
+      description: "ljnljn.",
+    },
+    {
+      title: "Consultant - Full Stack Developer",
+      logo: "/shunyeka.png",
+      company: "Shunyeka Systems Pvt Ltd.",
+      location: "Bangalore, India",
+      date: "Aug, 2019 - Oct, 2019",
+      description: "ljnljn.",
+    },
+    {
+      title: "Software Engineer - Full Stack Developer",
+      logo: "/vectorflow_logo.jpg",
+      company: "VectorFlow Labs Pvt Ltd.",
+      location: "Bangalore, India",
+      date: "Oct, 2018 - Oct, 2019",
+      description: "ljnljn.",
+    },
+  ],
 };
 
 export type SkillType = {
@@ -155,6 +217,15 @@ export type SkillType = {
   boldIdx: number;
   description: string;
   smallTitle?: string;
+};
+
+export type TimelineType = {
+  title: string;
+  logo: string;
+  company: string;
+  location: string;
+  date: string;
+  description: string;
 };
 
 export interface InfoConfig {
@@ -169,4 +240,5 @@ export interface InfoConfig {
   education: string[];
   banner: string[];
   skills: SkillType[];
+  timeline: TimelineType[];
 }

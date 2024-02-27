@@ -78,3 +78,18 @@ html {
   height: 100%;
   width: 100%;
 }
+
+.timelineIcon {
+  height: 50px !important;
+  width: 50px !important;
+  left: -5px !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .timelineIcon {
+    height: 100px !important;
+    width: 100px !important;
+    left: 50% !important;
+    margin-left: -50px !important;
+  }
+}

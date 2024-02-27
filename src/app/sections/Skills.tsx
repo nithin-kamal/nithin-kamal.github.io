@@ -8,8 +8,8 @@ import SubTitle from "@/components/Skills/SubTitle";
 const Skills = () => {
   return (
     <Section id="skills">
-      <div className="flex-col center-container gap-3 z-[20] ">
-        <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200 lg:text-4xl text-center ">
+      <div className="flex-col center-container gap-3 z-[20] mt-[30px]">
+        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200 lg:text-4xl text-center ">
           Skills:
         </h1>
         <h3 className="`text-zinc-300 lg:text-lg text-center md:text-start pb-[20px]">
@@ -22,7 +22,12 @@ const Skills = () => {
             <AccordionItem
               key={index}
               aria-label={skill.title}
-              className="!bg-opacity-70 backdrop-blur-sm"
+              className="!bg-opacity-20 mb-[10px]"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(32, 32, 32, 0.5) 92%, rgba(51, 51, 51, 0.5) 100%)",
+                boxShadow: "0 3px 10px 0 rgba(0,0,0,0.5)",
+              }}
               startContent={
                 <Avatar
                   isBordered
