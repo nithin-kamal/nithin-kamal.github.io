@@ -56,7 +56,7 @@ const NavbarComponent = () => {
           <div className=" justify-start p-0 content-center flex">
             <Button
               variant="light"
-              className="text-4xl font-bold px-2 w-fit text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+              className="text-2xl sm:text-4xl font-bold px-2 w-fit text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
             >
               <SectionLink href="landing">{data.name}</SectionLink>
             </Button>
