@@ -26,7 +26,8 @@ const About = () => {
         <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200 lg:text-2xl text-center ">
           Learn more about my:
         </h3>
-        <div className="flex flex-row place-items-center place-content-center gap-5 flex-wrap mt-4 overflow-hidden snap-end">
+        <div className="flex flex-row place-items-center place-content-center gap-5 flex-wrap mt-4 overflow-hidden 
+        ">
           {data.sections.slice(1).map((section, index) => (
             <div key={index}>
               <SectionProvider
