@@ -66,7 +66,7 @@ const NavbarComponent = () => {
               <div key={index}>{option}</div>
             ))}
           </div>
-          <div className="flex lg:hidden justify-end ml-auto ">
+          <div className="flex lg:hidden justify-end ml-auto mr-2 ">
             <Button
               variant="bordered"
               onClick={handleMenu}
