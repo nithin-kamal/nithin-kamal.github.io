@@ -1,3 +1,5 @@
+import React from "react";
+
 export const data: InfoConfig = {
   name: "Nithin Kamal",
   title: "Machine Learning Engineer, Software Engineer, Full Stack Developer",
@@ -9,9 +11,8 @@ export const data: InfoConfig = {
   about: {
     title:
       "AI/ML Engineer | Full Stack Developer, RWTH Aachen University '23, MSc in Robotics ",
-    description: `I am a recent graduate of the Master’s program in Robotic Systems Engineering
-    at RWTH Aachen University (AI/ML Specialization). I have a proven track record with more than 5 years of professional experience in software development,
-    full-stack development and machine learning. `,
+    description: `With over 5 years of industry experience, I possess a proven track record as a full-stack developer, software engineer, and machine learning engineer. My interests encompass Generative AI, computer vision, and web development. I am passionate about computer science, diligently keeping abreast of the latest research and popular frameworks in the tech industry.
+     `,
   },
   education: [
     "RWTH Aachen University, MSc in Robotics, 2023",
@@ -25,8 +26,13 @@ export const data: InfoConfig = {
       logo: "/code.png",
       items: ["Python", "TypeScript", "JavaScript", "C++", "Bash", "SQL"],
       boldIdx: 2,
-      description:
-        "I have been working with Python for more than 5 years and have experience in developing web applications using TypeScript and JavaScript.",
+      description: (
+        <React.Fragment>
+          {`In the past `}
+          <b>7 years</b>
+          {` I've accumulated extensive experience with Python and JavaScript through personal projects, professional work, research, and classwork. I've successfully leveraged my expertise in Python, TypeScript, C++, Bash, and SQL to develop and deploy applications across diverse industries.`}
+        </React.Fragment>
+      ),
     },
     {
       title: "Artificial Intelligence & Machine Learning",
@@ -53,12 +59,25 @@ export const data: InfoConfig = {
         "JAX",
       ],
       boldIdx: 5,
-      description:
-        "I have been working with AI/ML for more than 3 years and have experience in developing and deploying AI/ML models for various applications.",
+      description: (
+        <>
+          {
+            "I possess significant research experience in Computer Vision and machine learning, gained through coursework and roles at "
+          }
+          <b>BMW Group</b>
+          {" and "}
+          <b>Fraunhofer IKS</b>
+          {". In the last "}
+          <b> 3 years</b>
+          {
+            ", I have undertaken numerous personal projects in Generative AI, Computer Vision, and natural language processing, providing me with a rich experience in popular ML frameworks and the latest algorithms."
+          }
+        </>
+      ),
     },
     {
       title: "Web Development",
-      logo: "/web.png",
+      logo: "/web.jpg",
       items: [
         "React",
         "Next.js",
@@ -75,8 +94,15 @@ export const data: InfoConfig = {
         "Server Side Rendering",
       ],
       boldIdx: 5,
-      description:
-        "I have been working with web development for more than 5 years and have experience in developing and deploying web applications.",
+      description: (
+        <>
+          {"With nearly "}
+          <b>5 years</b>
+          {
+            " of industry experience as a full-stack developer, I have successfully developed and shipped over 12 products. My proficiency extends to modern web development tools and frameworks, and I boast a proven track record of consistently delivering exceptional work."
+          }
+        </>
+      ),
     },
     {
       title: "DevOps & Cloud",
@@ -96,7 +122,7 @@ export const data: InfoConfig = {
       ],
       boldIdx: 3,
       description:
-        "I have experience in end-to-end development and deployment of web applications and AI/ML models across professional work and personal projects which includes this very own portfolio website. This includes CI/CD, containerization, and cloud deployment. I have professional experience in AWS services like S3, EC2, Lambda, and Microsoft Azure.",
+        "I possess significant experience in the end-to-end development and deployment of web applications and AI/ML models, spanning both professional work and personal projects, including the creation of my own portfolio website. This involves expertise in CI/CD, containerization, and cloud deployment. Additionally, I have professional experience in utilizing AWS services such as S3, EC2, Lambda, and Microsoft Azure.",
     },
     {
       title: "Databases",
@@ -111,7 +137,7 @@ export const data: InfoConfig = {
       ],
       boldIdx: 2,
       description:
-        "I have experience in working with SQL and NoSQL databases for various applications.",
+        "I am well-versed in SQL and NoSQL databases, utilising PostgreSQL, MySQL, SQLite, and MongoDB in personal and professional projects over the last 7 years. Furthermore, I have hands-on experience with time series databases, handling massive amounts of data during my tenure at Kimball Electronics and Indurad GmbH.",
     },
     {
       title: "Methodology",
@@ -126,7 +152,7 @@ export const data: InfoConfig = {
       ],
       boldIdx: 2,
       description:
-        "I have experience in working with Agile methodologies and have been part of various software development teams.",
+        "I possess substantial experience in agile methodologies, including Scrum and Kanban, focusing on test-driven development (TDD). Additionally, I am well-versed in Pair programming and actively engage in code reviews to ensure high-quality development practices.",
     },
     {
       title: "Others",
@@ -146,7 +172,7 @@ export const data: InfoConfig = {
       ],
       boldIdx: 3,
       description:
-        "I have experience in working with ROS and have experience in developing and deploying ROS nodes for various robotic applications. I am also proficient in data structures and algorithms and design patterns.",
+        "As part of my coursework and my role at BMW, I have actively contributed to projects involving automation and robotic operating systems. Additionally, I have solid foundations in programming, encompassing data structures, algorithms, and design patterns.",
     },
   ],
   timeline: [
@@ -157,7 +183,7 @@ export const data: InfoConfig = {
       location: "Munich, Germany",
       date: "July, 2023 - Jan, 2024",
       description:
-        "Worked on a project to develop automated trains. Developed collaborative user interfaces for the system design and definition. Researched and defined the components within the autonomous systems and its dynamic environment.",
+        "I contributed to a project focused on developing automated trains, where my responsibilities included crafting collaborative user interfaces for system design and definition. I conducted research to define the components within autonomous systems and their dynamic environments.",
     },
     {
       title: "Master's Thesis - Machine Learning Engineer",
@@ -166,7 +192,7 @@ export const data: InfoConfig = {
       location: "Munich, Germany",
       date: "Oct, 2022 - July, 2023",
       description:
-        "As part of my master's thesis research, I conducted extensive research into the state of the art vision-based anomaly detection algorithms. I developed and implemented a machine learning pipeline for the vision module of an automated quality assurance robot, based on a novel approach for industrial anomaly detection that achieved a 30% improvement in robustness.",
+        " In my master's thesis research, I conducted extensive investigations into state-of-the-art vision-based anomaly detection algorithms. Following this, I developed and implemented a machine-learning pipeline for the vision module of an automated quality assurance robot. The employed approach was novel, leading to a noteworthy 30% improvement in robustness for industrial anomaly detection.",
     },
     {
       title: "Intern - Robotic Software Engineer",
@@ -175,7 +201,7 @@ export const data: InfoConfig = {
       location: "Munich, Germany",
       date: "April, 2022 - Oct, 2022",
       description:
-        "My work as an intern at the digitization and innovation department of BMW Group involved developing graphical user interfaces, integrating new sensors and enforcing safety limits for the control and monitoring of an automated quality assurance robot and the end-to-end development of a scalable web-app for remote monitoring and control of the robot.",
+        "During my internship at BMW Group's Digitization and Proof of Concepts department, I handled various responsibilities, including developing graphical user interfaces, integrating new sensors, and enforcing safety limits to control and monitor an automated quality assurance robot. Additionally, I completed the end-to-end development of a scalable web app designed for remote monitoring and configuration of the robot.",
     },
     {
       title: "Software Developer (Student) - Full Stack Developer",
@@ -184,7 +210,7 @@ export const data: InfoConfig = {
       location: "Aachen, Germany",
       date: "April, 2021 - May, 2022",
       description:
-        "My work at this role involved developing interactive and scalable web-apps and visualization across multiple products. I was also involved in optimizing the performance and user experience of the products.",
+        "In this role, I developed interactive and scalable web applications and visualisations across multiple products. Additionally, I actively contributed to optimising the performance and enhancing the user experience of these products.",
     },
     {
       title: "Software Engineer - Full Stack Developer",
@@ -192,7 +218,8 @@ export const data: InfoConfig = {
       company: "Kimball Electronics",
       location: "Trivandrum, India",
       date: "Nov, 2019 - May, 2020",
-      description: "ljnljn.",
+      description:
+        "My responsibilities included full-stack development and shipping of a scalable web application. Additionally, I researched and developed scripts to automate aspects of the production pipeline and performed server configurations.",
     },
     {
       title: "Consultant - Full Stack Developer",
@@ -200,7 +227,8 @@ export const data: InfoConfig = {
       company: "Shunyeka Systems Pvt Ltd.",
       location: "Bangalore, India",
       date: "Aug, 2019 - Oct, 2019",
-      description: "ljnljn.",
+      description:
+        "I held primary responsibility for UI migration and the seamless integration of AWS services and Stripe payments.",
     },
     {
       title: "Software Engineer - Full Stack Developer",
@@ -208,7 +236,8 @@ export const data: InfoConfig = {
       company: "VectorFlow Labs Pvt Ltd.",
       location: "Bangalore, India",
       date: "Oct, 2018 - Oct, 2019",
-      description: "ljnljn.",
+      description:
+        "I actively contributed to product planning and design, playing a pivotal role as a full-stack developer. I was instrumental in developing a responsive web application featuring interactive visualisations, a chatbot, and real-time social platform notifications.",
     },
   ],
 };
@@ -218,7 +247,7 @@ export type SkillType = {
   logo: string;
   items: string[];
   boldIdx: number;
-  description: string;
+  description: React.ReactNode | string;
   smallTitle?: string;
 };
 

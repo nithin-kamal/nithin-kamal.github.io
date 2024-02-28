@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import { data, SkillType } from "../InfoConfig";
 import Section from "@/components/main/Section/Section";
-import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
+import { Accordion, AccordionItem, Avatar, Image } from "@nextui-org/react";
 import SubTitle from "@/components/Skills/SubTitle";
 
 const Skills = () => {
@@ -17,46 +16,50 @@ const Skills = () => {
             "Below are some of my skills, and I'm always looking to learn more. "
           }
         </h3>
-        <Accordion variant="splitted">
+        <div
+          className={
+            "grid auto-rows-auto md:auto-rows-fr grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3"
+          }
+        >
           {data.skills.map((skill: SkillType, index: number) => (
-            <AccordionItem
+            <div
               key={index}
               aria-label={skill.title}
-              className="!bg-opacity-20 mb-[10px]"
+              className="!bg-opacity-20 mb-[10px] md:m-[20px] p-2"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(32, 32, 32, 0.5) 92%, rgba(51, 51, 51, 0.5) 100%)",
                 boxShadow: "0 3px 10px 0 rgba(0,0,0,0.5)",
               }}
-              startContent={
-                <Avatar
-                  isBordered
-                  color="primary"
-                  radius="lg"
+            >
+              <div className="flex mt-[10px] gap-6 items-center">
+                <Image
+                  alt={skill.title}
                   src={skill.logo}
+                  height={50}
+                  width={50}
+                  className="rounded-full ml-[10px] bg-primary"
                 />
-              }
-              subtitle={
-                <SubTitle skills={skill.items} boldIdx={skill.boldIdx} />
-              }
-              title={
-                <p className="text-lg md:text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-cyan-500 text-center md:text-start font-semibold">
+                <p className="text-lg md:text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-cyan-500 text-center font-semibold  ">
                   {
                     <>
                       <span className="md:hidden">
-                        {" "}
                         {skill.smallTitle || skill.title}
                       </span>
                       <span className="hidden md:block"> {skill.title}</span>
                     </>
                   }
                 </p>
-              }
-            >
-              {skill.description}
-            </AccordionItem>
+              </div>
+              <div className="flex flex-col h-full w-full px-4">
+                <SubTitle skills={skill.items} boldIdx={skill.boldIdx} />
+                <p className="text-justify mt-[20px] text-stone-400">
+                  {skill.description}
+                </p>
+              </div>
+            </div>
           ))}
-        </Accordion>
+        </div>
       </div>
     </Section>
   );

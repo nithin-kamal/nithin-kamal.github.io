@@ -10,7 +10,7 @@ interface Props {
 const ProjectCard = ({ project }: Props) => {
   const [title, description] = project.description.split(":");
   return (
-    <div className="relative flex flex-col  overflow-hidden rounded-lg min-h-[400px] max-w-[600px] border border-[#141414] bg-slate-900 bg-opacity-75 shadow-[0_3px_10px_0_rgba(0,0,0,0.5)]">
+    <div className="flex flex-col  rounded-lg m-4 2xl:mx-10 border border-[#141414] bg-slate-900 bg-opacity-75 shadow-[0_3px_10px_0_rgba(0,0,0,0.5)]">
       <div
         className="pt-4 w-full min-h-[220px] flex items-end justify-center bg-cover bg-no-repeat 
         bg-[linear-gradient(to_right_bottom,rgba(10,10,10,0.7),rgba(32,32,32,0.7)),url('/NextWebsite.png')]
@@ -24,9 +24,9 @@ const ProjectCard = ({ project }: Props) => {
           </h1>
         </div>
       </div>
-      <div className="p-2 px-4 bg-gradient-to-r from-slate-900 to-zinc-900 relative min-h-[180px]">
+      <div className="p-2 px-4 bg-gradient-to-r from-slate-900 to-zinc-900 h-full">
         <p className="m-2 text-gray-300 text-justify">{description}</p>
-        <div className="center-container flex-row flex-wrap gap-3">
+        <div className="flex place-content-center h-auto flex-row flex-wrap gap-3">
           {project.repositoryTopics.edges.map(({ node }, index) => (
             <div
               key={index}

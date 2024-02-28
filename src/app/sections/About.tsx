@@ -4,7 +4,6 @@ import Section from "@/components/main/Section/Section";
 import { data } from "../InfoConfig";
 import SectionProvider from "@/components/About/SectionProvider";
 import Intro from "@/components/About/Intro";
-import { motion } from "framer-motion";
 
 const About = () => {
   const imageVariants = {
