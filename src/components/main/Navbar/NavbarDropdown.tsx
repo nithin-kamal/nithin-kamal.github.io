@@ -22,7 +22,7 @@ const NavbarDropDown = ({
       ref={wrapperRef}
     >
       {NavbarOptions().map((option, index) => (
-        <div key={index} className="px-2 pr-6 w-full">
+        <div key={index} className="px-2 pr-2 w-full">
           {option}
         </div>
       ))}

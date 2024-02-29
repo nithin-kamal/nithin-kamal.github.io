@@ -18,14 +18,18 @@ const NavLinks = ({
   return (
     <Button
       variant="light"
-      className={" p-0  content-center w-fit justify-start h-fit " + className}
+      className={
+        " p-0  content-center w-full lg:w-fit justify-start h-fit " + className
+      }
     >
       <li
-        className={`text-lg flex content-center ${
+        className={`text-lg flex w-full lg:w-fit content-center ${
           activeSection === href ? "border-b-3 font-semibold" : ""
         }`}
       >
-        <SectionLink href={href}>{children}</SectionLink>
+        <SectionLink href={href} className="w-full lg:w-fit ">
+          {children}
+        </SectionLink>
       </li>
     </Button>
   );
