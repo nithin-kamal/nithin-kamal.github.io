@@ -17,7 +17,8 @@ const NavbarOptions = (activeSection?: string) => {
     <NavLinks
       activeSection={activeSection}
       key="resume"
-      href="fdgdf"
+      href="/Nithin_Kamal_resume.pdf"
+      download="Nithin_Kamal_Resume.pdf"
       className="flex"
     >
       RESUME

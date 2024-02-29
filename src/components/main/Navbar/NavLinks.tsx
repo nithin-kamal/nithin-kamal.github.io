@@ -7,6 +7,7 @@ type NavLinkType = {
   children: ReactNode;
   className?: string;
   activeSection?: string;
+  download?: string;
 };
 
 const NavLinks = ({
@@ -14,6 +15,7 @@ const NavLinks = ({
   children,
   className,
   activeSection,
+  download,
 }: NavLinkType) => {
   return (
     <Button
@@ -27,7 +29,11 @@ const NavLinks = ({
           activeSection === href ? "border-b-3 font-semibold" : ""
         }`}
       >
-        <SectionLink href={href} className="w-full lg:w-fit ">
+        <SectionLink
+          href={href}
+          download={download}
+          className="w-full lg:w-fit "
+        >
           {children}
         </SectionLink>
       </li>
