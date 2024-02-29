@@ -26,7 +26,7 @@ const Intro = (props: Props) => {
             >
               <div className="center-container flex-col">
                 <Image
-                  src="/thumbnailPortfolio.png"
+                  src="/air.jpg"
                   alt="work icons"
                   className={
                     "max-h-[15vh]  rounded-full md:max-h-[30vh] w-auto h-auto place-items-center place-content-center "
